@@ -18,16 +18,16 @@ function Location(data) {
 Location.prototype.setIcon = function(category) {
 
       var icons = [];
-      icons['gallery'] = 'gallery-ico.png';
-      icons['dance'] = 'dance-ico.png';
-      icons['theater'] = 'theater-ico.png';
-      icons['bookstore'] = 'bookstore-ico.png';
-      icons['music'] = 'music-ico.png';
-      icons['museum'] = 'museum-ico.png';
+      icons["gallery"] = "gallery-ico.png";
+      icons["dance"] = "dance-ico.png";
+      icons["theater"] = "theater-ico.png";
+      icons["bookstore"] = "bookstore-ico.png";
+      icons["music"] = "music-ico.png";
+      icons["museum"] = "museum-ico.png";
 
       return "assets/img/map-icons/" + icons[category];
 
-}
+};
 
 function AppViewModel() {
 
@@ -62,7 +62,7 @@ function AppViewModel() {
 
       // Loading data from Firebase database server and save mappedLocations in locations observable array
       $.getJSON("https://palermoneighborhoodmap.firebaseio.com/locations.json", function(allData) {
-            var mappedLocations = $.map(allData, function(item) { return new Location(item) });
+            var mappedLocations = $.map(allData, function(item) { return new Location(item); });
             self.locations(mappedLocations);
       }).error( function(e) {
             $(".venue-list").hide();
@@ -238,10 +238,12 @@ function AppViewModel() {
                   var marker = self.createMarker(locations[i]);
                   // Push the marker to our array of markers.
                   self.markers.push(marker);
+
                   // Create an onclick event to open an infowindow at each marker.
                   marker.addListener('click', function() {
                         self.populateInfoWindow(this, largeInfowindow);
                   });
+
                   bounds.extend(self.markers[i].position);
 
             }//End for
