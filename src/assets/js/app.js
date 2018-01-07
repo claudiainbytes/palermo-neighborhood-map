@@ -11,7 +11,6 @@ function Location(data) {
     self.imgvenue = data.imgvenue;
     self.website = data.website;
     self.icon = self.setIcon(self.category);
-    self.display = true;
 
 }
 
@@ -24,7 +23,6 @@ Location.prototype.setIcon = function(category) {
       icons.bookstore = "bookstore-ico.png";
       icons.music = "music-ico.png";
       icons.museum = "museum-ico.png";
-
       return "assets/img/map-icons/" + icons[category];
 
 };
@@ -45,7 +43,7 @@ function AppViewModel() {
       });
 
       // This array represents all markers
-      self.markers = [];
+      self.markers = ko.observableArray([]);
 
       // Locations observable array
       self.locations = ko.observableArray([]);
@@ -97,8 +95,16 @@ function AppViewModel() {
       };
 
       // This custom binding show the infoWindow over a specific location link in nav bar
-      self.clickLocation = function(location) {
-            self.populateInfoWindow(self.createMarker(location), self.largeInfowindow);
+      self.clickLocation = function(selectedLocation) {
+          // Get the specific marker for this location
+          if (selectedLocation instanceof Location) {
+            for ( var i = 0; i < self.markers().length; i++){
+              if(selectedLocation.title == self.markers()[i].title){
+                selectedLocation = self.markers()[i];
+              }
+            }
+          }
+          self.populateInfoWindow(selectedLocation, self.largeInfowindow);
       };
 
       //This function compares a string with the first tokens of another string
@@ -120,11 +126,21 @@ function AppViewModel() {
 
       // This function will loop through the locations and hide them all.
       self.hideLocations = function (markers) {
-        if ( markers.length > 0 ) {
-              for (var i = 0; i < markers.length; i++) {
-                markers[i].setMap(null);
-              }
+        for (var i = 0; i < markers.length; i++) {
+          markers[i].setMap(null);
         }
+      };
+
+      // This function works only with a marker
+      self.showMarker = function (marker) {
+          marker.setMap(self.map);
+          self.bounds.extend(marker.position);
+          self.map.fitBounds(self.bounds);
+      };
+
+      // This function works only with a marker
+      self.removeMarker = function (marker) {
+          marker.setMap(null);
       };
 
       //Filter the items using the filter text
@@ -132,12 +148,16 @@ function AppViewModel() {
           var filter = self.filter();
           var startsWith = false;
           if (!filter) {
+              self.showLocations(self.markers());
               return self.locations();
           } else {
-              return ko.utils.arrayFilter(self.locations(), function(location) {
-                   startsWith = self.stringStartsWith(location.title.toLowerCase(), filter.toLowerCase());
-                   location.display = startsWith;
-                   return startsWith;
+              self.hideLocations(self.markers());
+              return ko.utils.arrayFilter(self.markers(), function(marker) {
+                   startsWith = self.stringStartsWith(marker.title.toLowerCase(), filter.toLowerCase());
+                   if (startsWith) {
+                      self.showMarker(marker);
+                      return true;
+                   }
               });
           }
       }, self);
@@ -196,7 +216,7 @@ function AppViewModel() {
                                           '</div>';
 
                   //This function gets the streetview image according to the position
-                  function getStreetView( data, status ) {
+                  var getStreetView = function( data, status ) {
                     infowindow.setContent(contentString);
                     if (status == google.maps.StreetViewStatus.OK) {
                       var nearStreetViewLocation = data.location.latLng;
@@ -231,20 +251,25 @@ function AppViewModel() {
             var largeInfowindow = self.largeInfowindow;
             var bounds = self.bounds;
 
+            var clickInfoWindow = function( marker, largeInfowindow ) {
+              marker.addListener('click', function() {
+                  self.populateInfoWindow(this, largeInfowindow);
+              });
+            };
+
             // The following group uses the location array to create an array of markers on initialize.
             for (var i = 0; i < locations.length; i++) {
 
                   // Create a marker per location, and put into markers array.
                   var marker = self.createMarker(locations[i]);
+
                   // Push the marker to our array of markers.
-                  self.markers.push(marker);
+                  self.markers().push(marker);
 
                   // Create an onclick event to open an infowindow at each marker.
-                  marker.addListener('click', function() {
-                        self.populateInfoWindow(this, largeInfowindow);
-                  });
+                  clickInfoWindow(marker, largeInfowindow);
 
-                  bounds.extend(self.markers[i].position);
+                  bounds.extend(self.markers()[i].position);
 
             }//End for
 

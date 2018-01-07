@@ -43,7 +43,7 @@
         </div>
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-12">
-            <ul class="venue-list" id="venue-list" data-bind="foreach: filteredLocations, scrollLocations: filteredLocations().length > 0">
+            <ul class="venue-list" id="venue-list" data-bind="foreach: filteredLocations, scrollLocations: 0">
               <li><a href="#" data-bind="text: title, click: $root.clickLocation"></a></li>
             </ul>
             <p class="locationsErrorHandling">
