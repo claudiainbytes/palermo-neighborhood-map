@@ -45,8 +45,15 @@ This application does:
 
 ![alt locations](https://github.com/claudiainbytes/palermo-neighborhood-map/blob/master/about/screenshot2.png)
 
+- Watching the street nearest to the location using Google Street View
+
+![alt streetview](https://github.com/claudiainbytes/palermo-neighborhood-map/blob/master/about/screenshot3.png)
+
 - Filter locations by title of location
+
 ![alt locations](https://github.com/claudiainbytes/palermo-neighborhood-map/blob/master/about/screenshot3.png)
+
+
 
 
 ## How to install
