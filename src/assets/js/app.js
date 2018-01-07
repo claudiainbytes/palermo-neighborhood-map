@@ -18,12 +18,12 @@ function Location(data) {
 Location.prototype.setIcon = function(category) {
 
       var icons = [];
-      icons["gallery"] = "gallery-ico.png";
-      icons["dance"] = "dance-ico.png";
-      icons["theater"] = "theater-ico.png";
-      icons["bookstore"] = "bookstore-ico.png";
-      icons["music"] = "music-ico.png";
-      icons["museum"] = "museum-ico.png";
+      icons.gallery = "gallery-ico.png";
+      icons.dance = "dance-ico.png";
+      icons.theater = "theater-ico.png";
+      icons.bookstore = "bookstore-ico.png";
+      icons.music = "music-ico.png";
+      icons.museum = "museum-ico.png";
 
       return "assets/img/map-icons/" + icons[category];
 
