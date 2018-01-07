@@ -1,0 +1,277 @@
+{
+  "locations": [
+    {
+      "id": 1,
+      "title": "Casatinta Galería",
+      "location": {
+        "lat": 4.6349472,
+        "lng": -74.0709732
+      },
+      "category": "gallery",
+      "address": "Tr 17 # 45D - 61",
+      "desc": "Independent place focused on illustration and graphic arts. Provides workshops, meetings and art exhibitions.",
+      "imgvenue": "01.jpg",
+      "website": "https://www.facebook.com/Casatinta.Bogota/"
+    },
+    {
+      "id": 2,
+      "title": "Teatro La Maldita Vanidad",
+      "location": {
+        "lat": 4.6339436,
+        "lng": -74.0718549
+      },
+      "category": "theater",
+      "address": "Cra 19 45A-17",
+      "desc": "Colombian theater company provides theatrical productions, workshops, social gathering about the language of the stage.",
+      "imgvenue": "02.jpg",
+      "website": "https://www.facebook.com/lamalditavanidad/"
+    },
+    {
+      "id": 3,
+      "title": "Teatro Fundación Ernesto Aronna",
+      "location": {
+        "lat": 4.6345096,
+        "lng": -74.0726244
+      },
+      "category": "theater",
+      "address": "Cra 20 45A-59",
+      "desc": "Marionette theater company focused on kids entertainment and colombian comedy.",
+      "imgvenue": "03.jpg",
+      "website": "https://www.facebook.com/pg/TeatroMarionetasErnestoAronna/"
+    },
+    {
+      "id": 4,
+      "title": "Casa Tomada Libros y Café",
+      "location": {
+        "lat": 4.6351642,
+        "lng": -74.0716913
+      },
+      "category": "bookstore",
+      "address": "Tr 19Bis 45D-23",
+      "desc": "Friendly and casual bookstore with a great selection of world literature, children and teen books and speciality books.",
+      "imgvenue": "04.jpg",
+      "website": "https://www.facebook.com/CasaTomadaLibrosyCafe/"
+    },
+    {
+      "id": 5,
+      "title": "Teatro Ditirambo",
+      "location": {
+        "lat": 4.633107,
+        "lng": -74.0681629
+      },
+      "category": "theater",
+      "address": "Cl 45A 14-37",
+      "desc": "Colombian theater company provides artistic creation, developing the mestizan popular, analogic and contemporary theater.",
+      "imgvenue": "05.jpg",
+      "website": "https://www.facebook.com/pg/TeatroDitirambo"
+    },
+    {
+      "id": 6,
+      "title": "Galeria Café Libro",
+      "location": {
+        "lat": 4.634201,
+        "lng": -74.068948
+      },
+      "category": "music",
+      "address": "Tr 15B 46-38",
+      "desc": "Meetings about salsa, cuban and caribbean music. Live salsa dancing and music shows.",
+      "imgvenue": "06.jpg",
+      "website": "https://www.facebook.com/pg/galeriacafelibro"
+    },
+    {
+      "id": 7,
+      "title": "Fundación El Colombiano",
+      "location": {
+        "lat": 4.633838,
+        "lng": -74.072657
+      },
+      "category": "dance",
+      "address": "Cra 20 45-33",
+      "desc": "Foundation that promotes the colombian cultural heritage. Typical dance classes.",
+      "imgvenue": "07.jpg",
+      "website": "https://www.facebook.com/elcolombianofundacion/"
+    },
+    {
+      "id": 8,
+      "title": "Galería De Arte Guerrero",
+      "location": {
+        "lat": 4.6332188,
+        "lng": -74.0716402
+      },
+      "category": "gallery",
+      "address": "Cl 45 #18A- 25",
+      "desc": "Pionera en el desarrollo de proyectos culturales y de formación de miles de jóvenes, adultos y niños, que han encontrado en nuestros programas las herramientas necesarias para abrir sus experiencias a la creación.",
+      "imgvenue": "08.jpg",
+      "website": "https://www.facebook.com/artesguerrero1/"
+    },
+    {
+      "id": 9,
+      "title": "Zona Cinco Escuela de Cine y Fotografía",
+      "location": {
+        "lat": 4.632498,
+        "lng": -74.068336
+      },
+      "category": "gallery",
+      "address": "Cll 45 14-43",
+      "desc": "Escuela Colombo Cubana con más 10 años de experiencia en la enseñanza de la imagen.",
+      "imgvenue": "09.jpg",
+      "website": "https://www.facebook.com/escuelacineyfotografia/"
+    },
+    {
+      "id": 10,
+      "title": "Casa Teatro de Bogotá",
+      "location": {
+        "lat": 4.6316291,
+        "lng": -74.0698099
+      },
+      "category": "theater",
+      "address": "Dg 40A #16-66",
+      "desc": "Sede principal de la Compañía Teatro Vivo de Colombia presenta espectáculos teatrales interactivos no convencionales",
+      "imgvenue": "10.jpg",
+      "website": "https://www.facebook.com/casateatrodebogota/"
+    },
+    {
+      "id": 11,
+      "title": "Museo Jorge Eliecer Gaitán",
+      "location": {
+        "lat": 4.630501,
+        "lng": -74.069587
+      },
+      "category": "museum",
+      "address": "Cl 42 15-52",
+      "desc": "La Casa Museo Jorge Eliécer Gaitán, es la casa que habitó Jorge Eliécer Gaitán Ayala desde el 22 de diciembre de 1933 hasta el día de su asesinato el 9 de abril de 1948.",
+      "imgvenue": "11.jpg",
+      "website": "https://www.facebook.com/pages/Casa-Museo-Jorge-Eliécer-Gaitán/"
+    },
+    {
+      "id": 12,
+      "title": "Academia de Artes Guerrero - Sede Agora",
+      "location": {
+        "lat": 4.632215,
+        "lng": -74.071458
+      },
+      "category": "gallery",
+      "address": "Cr 18A 43-50",
+      "desc": "Salones acondicionados para las áreas de Artes Plásticas, Música, Danza, Teatro, Producción de Sonido y Medios Digitales, conforman los más de cuatro mil metros de área construida y adecuada a la necesidad de los artistas",
+      "imgvenue": "12.jpg",
+      "website": "https://www.facebook.com/artesguerrero1/"
+    },
+    {
+      "id": 13,
+      "title": "La Caja Galería",
+      "location": {
+        "lat": 4.631886,
+        "lng": -74.073264
+      },
+      "category": "gallery",
+      "address": "Dg 42A 20-35",
+      "desc": "El propósito de esta galería es promover el arte y permitir un espacio de exposición accesible al público.",
+      "imgvenue": "13.jpg",
+      "website": "https://www.facebook.com/cajagaleria/"
+    },
+    {
+      "id": 14,
+      "title": "Adra Danza",
+      "location": {
+        "lat": 4.632023,
+        "lng": -74.073489
+      },
+      "category": "dance",
+      "address": "Dg 42A #20-45",
+      "desc": "Escuela de danza. Desarrolla programas de formación en las áreas de danza, música, teatro, artes plásticas y artes .",
+      "imgvenue": "14.jpg",
+      "website": "https://www.facebook.com/adradanza/"
+    },
+    {
+      "id": 15,
+      "title": "Teatro Bernardo Romero Lozano",
+      "location": {
+        "lat": 4.636101,
+        "lng": -74.078398
+      },
+      "category": "theater",
+      "address": "Cl 46 28-30",
+      "desc": "Compañia teatral con una visión educativa y familiar. Nuestra intención siempre ha sido, sigue y seguirá siendo educar y fomentar cultura.",
+      "imgvenue": "15.jpg",
+      "website": "https://www.facebook.com/TeatroBernardoRomeroLozano/"
+    },
+    {
+      "id": 16,
+      "title": "San Cafe Club de Jazz y Galería",
+      "location": {
+        "lat": 4.635213,
+        "lng": -74.075072
+      },
+      "category": "music",
+      "address": "Cra 24 45A-64",
+      "desc": "Amigos del arte y la música, de la palabra hablada y escuchada, la buena comida y la Tertulia.",
+      "imgvenue": "16.jpg",
+      "website": "https://www.facebook.com/sancafejazz/"
+    },
+    {
+      "id": 17,
+      "title": "Sinfónica Juvenil de Colombia",
+      "location": {
+        "lat": 4.637238,
+        "lng": -74.068938
+      },
+      "category": "music",
+      "address": "Cra 16 49-52",
+      "desc": "Escuela de música. Orquesta sinfónica juvenil de Colombia.",
+      "imgvenue": "17.jpg",
+      "website": "https://www.facebook.com/escuelademusica.fosjc/"
+    },
+    {
+      "id": 18,
+      "title": "Batuta Teusaquillo",
+      "location": {
+        "lat": 4.634275,
+        "lng": -74.071977
+      },
+      "category": "music",
+      "address": "Cl 45a Bis #19-23",
+      "desc": "Escuela de música. Formación músical para niños y adolescentes.",
+      "imgvenue": "18.jpg",
+      "website": "https://www.facebook.com/CoroBatutaTeusaquillo/"
+    },
+    {
+      "id": 19,
+      "title": "Casa E",
+      "location": {
+        "lat": 4.632156,
+        "lng": -74.075494
+      },
+      "category": "theater",
+      "address": "Cra 24 41-69",
+      "desc": "Epicentro Teatral de la cultura en Colombia. Escuela de formación de actores. Programación de martes a sábado 8pm.",
+      "imgvenue": "19.jpg",
+      "website": "https://www.facebook.com/CasaEoficial/"
+    },
+    {
+      "id": 20,
+      "title": "Academia de Baile Paso latino",
+      "location": {
+        "lat": 4.6344,
+        "lng": -74.067541
+      },
+      "category": "dance",
+      "address": "Cra 14 46-91 Piso 2",
+      "desc": "Salsa dancing school.",
+      "imgvenue": "20.jpg",
+      "website": "https://www.facebook.com/Academia-de-Baile-Paso-latino-244168579043260/"
+    },
+    {
+      "id": 21,
+      "title": "Museo de La Basura",
+      "location": {
+        "lat": 4.627263,
+        "lng": -74.078365
+      },
+      "category": "museum",
+      "address": "Cl 39 26A-07",
+      "desc": "El Museo de la Basura en Morón se dedica a la promoción ambiental, al desarrollo social y al trabajo cooperativo.",
+      "imgvenue": "21.jpg",
+      "website": "https://www.facebook.com/museodelabasura/"
+    }
+  ]
+}

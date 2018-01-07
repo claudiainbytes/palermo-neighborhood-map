@@ -1,0 +1,340 @@
+html, body { height: 100%; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+nav {
+  background-color: #000;
+  z-index: 1;
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  transform: translate(0,0);
+  padding: 10px;
+  color: #fff;
+}
+
+nav.open {
+  transform: translate(-250px,0);
+}
+
+a#menu {
+  color: #fff;
+  font-size: 25px;
+  position: absolute;
+  transform: translate(250px,0);
+  margin-left: 1%;
+}
+
+a#menu:hover {
+  color: #b0c4de;
+}
+
+#fold-out section {
+  width: 240px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+#fold-out h1 {
+  margin: 0;
+  padding: 5px 0 15px 0;
+}
+
+#fold-out p {
+  margin: 0;
+  padding: 15px 0;
+}
+
+#fold-out form {
+  margin: 0;
+  padding: 5px 0 25px 0;
+}
+
+ul.venue-list {
+  margin: 0;
+  padding: 0;
+  max-height: 460px;
+  position: relative;
+  overflow-y: hidden;
+}
+
+.venue-list ul, li {
+  list-style-type: none;
+}
+
+.venue-list li {
+  margin: 0;
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+.venue-list a:hover,
+.venue-list a:active,
+.venue-list a:focus {
+  color: #fdcc65;
+  text-decoration: none;
+}
+
+#map {
+    height: 100%;
+}
+
+.iw {
+    margin: 0 auto;
+    max-width: 250px;
+    width: 100%;
+}
+
+.iw-row {
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.iw-col-1 {
+    width: 8.33%;
+}
+
+.iw-col-2 {
+    width: 16.66%;
+}
+
+.iw-col-3 {
+    width: 25%;
+}
+
+.iw-col-4 {
+    width: 33.33%;
+}
+
+.iw-col-5 {
+    width: 41.66%;
+}
+
+.iw-col-6 {
+    width: 50%;
+}
+
+.iw-col-7 {
+    width: 58.33%;
+}
+
+.iw-col-8 {
+    width: 66.66%;
+}
+
+.iw-col-9 {
+    width: 75%;
+}
+
+.iw-col-10 {
+    width: 83.33%;
+}
+
+.iw-col-11 {
+    width: 91.66%;
+}
+
+.iw-col-12 {
+    width: 100%;
+}
+
+.museum {
+  background-color: #f2a4cf;
+}
+
+.gallery {
+  background-color: #ffd981
+}
+
+.theater {
+  background-color: #f2a4a4;
+}
+
+.dance {
+  background-color: #bdf0fc;
+}
+
+.music {
+  background-color: #d4dadb;
+}
+
+.bookstore {
+  background-color: #9fdcea;
+}
+
+.info-title {
+  padding: 3px;
+}
+
+.info-category img {
+  padding: 3px;
+  margin: 0;
+  max-height: 32px;
+}
+
+.info-category span {
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-left: 5px;
+  vertical-align: middle;
+  font-size: 16px;
+}
+
+.info-title {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.info-content {
+  padding-left: 5px;
+}
+
+.info-content hr {
+  margin: 0;
+  padding: 2px 0;
+}
+
+.info-content a {
+  font-size: 24px;
+}
+
+#pano {
+  width: 230px;
+  height: 160px;
+  margin-left: 0;
+  text-align: center;
+  padding-top: 28%;
+}
+
+.imgvenue {
+  width: 100%;
+  height: auto;
+}
+
+.mapErrorHandling {
+  position: absolute;
+  top: 45%;
+  right: 10%;
+  display: none;
+  width: 240px;
+}
+
+.mapErrorHandling h1 {
+  font-size: 1.2em;
+}
+
+.mapErrorHandling p {
+  font-size: 1em;
+}
+
+.locationsErrorHandling {
+  color: #e50681;
+  display: none;
+}
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    ul.venue-list {
+      max-height: 80px;
+    }
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    .form-inline,
+    ul.venue-list {
+      display: none;
+    }
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    ul.venue-list {
+      max-height: 250px;
+    }
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    .form-inline,
+    ul.venue-list {
+      display: none;
+    }
+}
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    ul.venue-list {
+      max-height: 640px;
+    }
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    ul.venue-list {
+      max-height: 400px;
+    }
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+    ul.venue-list {
+      max-height: 400px;
+    }
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) {
+    .form-inline,
+    ul.venue-list {
+      display: none;
+    }
+}
+
+
