@@ -51,7 +51,7 @@ This application does:
 
 - Filter locations by title of location
 
-![alt locations](https://github.com/claudiainbytes/palermo-neighborhood-map/blob/master/about/screenshot3.png)
+![alt locations](https://github.com/claudiainbytes/palermo-neighborhood-map/blob/master/about/screenshot4.png)
 
 
 
