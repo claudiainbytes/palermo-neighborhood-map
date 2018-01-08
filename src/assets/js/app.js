@@ -231,7 +231,7 @@ function AppViewModel() {
                     } else {
                       document.getElementById('pano').innerHTML = '<div>No Street View Found</div>';
                     }
-                  }
+                  };
                   // Get the closest streetViewService near a 50m of radius
                   self.streetViewService.getPanoramaByLocation(marker.position, self.radius, getStreetView);
 
