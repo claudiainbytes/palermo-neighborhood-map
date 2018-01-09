@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palermo Cultural Neighborhood Map</title>
+    <meta name="description" content="The best venues that promove arts in Teusaquillo, Bogota, Colombia.">
+    <meta name="author" content="Claudia Estupinan Forero">
+    <link rel="stylesheet" href="assets/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/lib/perfect-scrollbar/css/perfect-scrollbar.css">
+    <link rel="stylesheet" type="text/css" href="assets/lib/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <nav id="fold-out">
+      <a id="menu">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </a>
+      <section class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <h1>Palermo Cultural Neighborhood Map</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <p>The best venues that promove arts in Teusaquillo, Bogotá, Colombia.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12">
+              <form class="form-inline">
+              <div class="form-group">
+              <label class="sr-only" for="search-venue">Search venue</label>
+              <input type="text" class="form-control" id="search-venue" placeholder="Search venue" data-bind="value: filter, valueUpdate: 'afterkeydown'">
+              </div>
+              <button type="click" class="btn btn-primary"><i class="fa fa-filter" aria-hidden="true"></i></button>
+              </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <ul class="venue-list" id="venue-list" data-bind="foreach: filteredLocations, scrollLocations: 0">
+              <li><a href="#" data-bind="text: title, click: $root.clickLocation"></a></li>
+            </ul>
+            <p class="locationsErrorHandling">
+              Locations are not available. Please, press <button type="button" class=" btn btn-primary btn-sm btnErrorHandling">HERE</button> to reload the page.
+            </p>
+          </div>
+        </div>
+      </section>
+    </nav>
+
+    <div id="map"></div>
+
+    <div class="mapErrorHandling">
+        <h1>Google Maps failed to load</h1>
+        <p>Please, press CTRL + F5 or CMD + R to reload the page</p>
+    </div>
+
+    <!--scripts-->
+    <script type="text/javascript" src="assets/lib/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/lib/knockout/knockout.min.js"></script>
+    <script type="text/javascript" src="assets/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script type="text/javascript" src="assets/lib/slick/slick.min.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCA5VDeAz7X_jsfnqwSwemo7ENkCkzijxI&v=3&callback=initMap"  onerror="mapErrorHandling()">
+    </script>
+   </body>
+</html>

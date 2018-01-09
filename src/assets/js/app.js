@@ -104,6 +104,8 @@ function AppViewModel() {
               }
             }
           }
+          self.stopToggleBounce(self.markers());
+          self.toggleBounce(selectedLocation);
           self.populateInfoWindow(selectedLocation, self.largeInfowindow);
       };
 
@@ -153,7 +155,7 @@ function AppViewModel() {
           } else {
               self.hideLocations(self.markers());
               return ko.utils.arrayFilter(self.markers(), function(marker) {
-                   startsWith = self.stringStartsWith(marker.title.toLowerCase(), filter.toLowerCase());
+                   startsWith = marker.title.toLowerCase().indexOf(filter.toLowerCase()) !== -1;
                    if (startsWith) {
                       self.showMarker(marker);
                       return true;
@@ -178,6 +180,7 @@ function AppViewModel() {
                   infowindow.marker = marker;
                   // Make sure the marker property is cleared if the infowindow is closed.
                   infowindow.addListener('closeclick', function() {
+                        self.stopToggleBounce(self.markers());
                         infowindow.marker = null;
                   });
 
@@ -242,6 +245,24 @@ function AppViewModel() {
 
       };
 
+      // Animates the marker when it is clicked
+      self.toggleBounce = function (marker) {
+        if (marker.getAnimation() !== null) {
+          marker.setAnimation(null);
+        } else {
+          marker.setAnimation(google.maps.Animation.BOUNCE);
+        }
+      };
+
+      // Stop bouncing of the marker when other is clicked
+      self.stopToggleBounce = function (markers) {
+        for( var i = 0; i < markers.length; i++){
+          if (markers[i].getAnimation() !== null) {
+            markers[i].setAnimation(null);
+          }
+        }
+      };
+
       // This function allows to initialize the map,
       // It was neccesary to use a computed function to work with observables
       self.loadMap = ko.computed( function () {
@@ -253,6 +274,8 @@ function AppViewModel() {
 
             var clickInfoWindow = function( marker, largeInfowindow ) {
               marker.addListener('click', function() {
+                  self.stopToggleBounce(self.markers());
+                  self.toggleBounce(this);
                   self.populateInfoWindow(this, largeInfowindow);
               });
             };
@@ -276,6 +299,13 @@ function AppViewModel() {
             // Extend the boundaries of the map for each marker
             self.map.fitBounds(bounds);
 
+            // This event makes sure map markers always fit on screen as user resizes their browser window
+            $( window ).resize(function() {
+              google.maps.event.addDomListener(window, 'resize', function() {
+                self.map.fitBounds(bounds);
+              });
+            });
+
       }, self);
 
       self.loadMap();
@@ -293,11 +323,10 @@ $(function() {
             var icon = $(this).find("i");
             icon.toggleClass("fa-bars fa-times");
       });
-});
 
-// To reload the page
-$('.btnErrorHandling').click(function() {
-    location.reload();
+      $(".btnErrorHandling").click( function(){
+          location.reload();
+      });
 });
 
 //We create the callback function initMap
